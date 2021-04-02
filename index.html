@@ -53,7 +53,7 @@ var vid = document.getElementById("player1");
 	function play(){
 		console.log("Play Video");
 		vid.play();
-		vidVol.innerHTML = vid.volume + 99 + "%";
+		vidVol.innerHTML = vid.volume * 100 + "%";
 	}
 
 	function pause() {
@@ -78,6 +78,7 @@ var vid = document.getElementById("player1");
 			console.log("New location " + vid.currentTime);
 		}
 		else{
+			vid.load();
 			vid.play();
 			console.log("Going back to beginning");
 		}
