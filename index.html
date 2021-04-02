@@ -73,7 +73,7 @@ var vid = document.getElementById("player1");
 
 	function skip(){
 		console.log("Original location " + vid.currentTime);
-		if(vid.currentTime < vid.duration + 15){
+		if(vid.currentTime < vid.duration - 15){
 			vid.currentTime += 15;
 			console.log("New location " + vid.currentTime);
 		}
@@ -86,11 +86,11 @@ var vid = document.getElementById("player1");
 	function mute(){
 		if(vid.muted == true){
 			vid.muted = false;
-			vidMute.innerHTML = "Unmuted";
+			vidMute.innerHTML = "Mute";
 		}
 		else{
 			vid.muted = true;
-			vidMute.innerHTML = "Muted";
+			vidMute.innerHTML = "Unmute";
 		}
 	}
 
